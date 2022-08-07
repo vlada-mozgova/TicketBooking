@@ -1,0 +1,68 @@
+﻿@model WebTicketBooking.Models.Account.RegisterModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1 align="center"><b>Register</b></h1>
+<div>
+    <form asp-action="Register">
+        <h1>Have an account already?</h1>
+        <a asp-action="Login" asp-controller="Account">Sigh in</a>
+        
+        <br />
+        <font color="red">
+            @TempData["failReg"]
+        </font>
+
+        <div asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="Username" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </font>
+            <input asp-for="Username" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </font>
+            <input asp-for="Email" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Code" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </font>
+            <input asp-for="Code" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </font>
+            <input asp-for="Password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="ConfirmPassword" class="control-label">Confirm password</label>
+            <font color="red">
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </font>
+            <input asp-for="ConfirmPassword" class="form-control" />
+        </div>
+        <hr />
+        <div>
+            <input type="submit" value="Sign up" class="btn btn-primary" />
+        </div>
+    </form>
+    
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Back Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

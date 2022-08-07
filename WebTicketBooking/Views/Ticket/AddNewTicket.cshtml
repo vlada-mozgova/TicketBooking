@@ -1,0 +1,100 @@
+﻿@model WebTicketBooking.Models.Ticket.TicketModel
+
+@{
+    ViewData["Title"] = "Add Ticket";
+}
+
+<h1 align="center"><b>Add Ticket</b></h1>
+<div>
+    <form asp-action="AddNewTicket">
+
+        <font color="red">
+            @TempData["failTicket"]
+            @TempData["fail"]
+        </font>
+        <br />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Origin" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Origin" class="text-danger"></span>
+            </font>
+            <input asp-for="Origin" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Origin_name" class="control-label">Origin name</label>
+            <font color="red">
+                <span asp-validation-for="Origin_name" class="text-danger"></span>
+            </font>
+            <input asp-for="Origin_name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Destination" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </font>
+            <input asp-for="Destination" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Destination_name" class="control-label">Destination name</label>
+            <font color="red">
+                <span asp-validation-for="Destination_name" class="text-danger"></span>
+            </font>
+            <input asp-for="Destination_name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Departure_date" class="control-label">Departure date</label>
+            <font color="red">
+                <span asp-validation-for="Departure_date" class="text-danger"></span>
+            </font>
+            <input asp-for="Departure_date" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Arrival_date" class="control-label">Arrival date</label>
+            <font color="red">
+                <span asp-validation-for="Arrival_date" class="text-danger"></span>
+            </font>
+            <input asp-for="Arrival_date" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Carrier" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Carrier" class="text-danger"></span>
+            </font>
+            <input asp-for="Carrier" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Stops" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Stops" class="text-danger"></span>
+            </font>
+            <input asp-for="Stops" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </font>
+            <input asp-for="Price" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Count" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Count" class="text-danger"></span>
+            </font>
+            <input asp-for="Count" class="form-control" />
+        </div>
+        <hr />
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Back Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

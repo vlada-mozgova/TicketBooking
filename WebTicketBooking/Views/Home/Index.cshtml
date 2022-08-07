@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h2 class="display-4">Welcome to Aviasales</h2>
+        <h3>Stuff for users:</h3>
+        <ul type="circle">
+            <li>Change your information like username or password</li>
+            <li>Approve yourself to admin</li>
+            <li>Book tickets</li>
+            <li>Cancel tickets but only if the departure is not in a day</li>
+            <li>Rerview list of your tickets</li>
+            <li>Review list of all active tickets</li>
+        </ul>
+        <h3>Stuff for admins:</h3>
+        <ul>
+            <li>All stuff for users</li>
+            <li>Review list of users</li>
+            <li>Add, delete and update tickets</li>
+            <li>Review list of all tickets</li>
+        </ul>
+    </div>
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h2 class="display-4">Introducing the Aviasales web site</h2>
+        <h2>for doing stuff with aviatickets</h2>
+        <p>After authorization you can see tickets from our database and book some of its. 
+        If you will have admin rights you can also manage tickets. You can approve yourself to admin anytime.</p>
+    </div>
+}

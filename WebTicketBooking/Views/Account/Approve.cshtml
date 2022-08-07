@@ -1,0 +1,31 @@
+﻿@model WebTicketBooking.Models.Account.ApproveModel
+
+@{
+    ViewData["Title"] = "Approve";
+}
+
+<h1 align="center"><b>Approve</b></h1>
+<div>
+    <form asp-action="Approve">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Code" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </font>
+            <input asp-for="Code" class="form-control" />
+        </div>
+        <hr />
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

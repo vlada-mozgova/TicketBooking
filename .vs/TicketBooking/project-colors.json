@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fe360eec-22a6-4d89-8bd8-fea3f06f89a1": {
+      "ProjectGuid": "fe360eec-22a6-4d89-8bd8-fea3f06f89a1",
+      "DisplayName": "WebTicketBooking.DAL",
+      "ColorIndex": 0
+    },
+    "c59c4768-344e-4174-8a23-895053745202": {
+      "ProjectGuid": "c59c4768-344e-4174-8a23-895053745202",
+      "DisplayName": "WebTicketBooking",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

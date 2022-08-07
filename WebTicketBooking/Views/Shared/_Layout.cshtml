@@ -1,0 +1,113 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    @if (ViewBag.Title != null)
+    {
+    <title>@ViewBag.Title</title>
+    }
+    else
+    {
+    <title>Aviasales</title>
+    }
+    @if (ViewBag.Description != null)
+    {
+    <meta name="description" content="@ViewBag.Description" />
+    }
+    @if (ViewBag.Keywords != null)
+    {
+    <meta name="keywords" content="@ViewBag.Keywords" />
+    }
+    <link rel="stylesheet" href="/css/main.min.css" asp-append-version="true" />
+
+</head>
+<body class="landing is-preload">
+    <div id="page-wrapper">
+
+        <header id="header" class="alt">
+            <h1><a asp-action="Index" asp-controller="Home">Aviasales</a> by Vladyslava Mozgova</h1>
+            <nav id="nav">
+                <ul>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>
+                            <a href="#" class="icon solid fa-angle-down">Tickets</a>
+                            <ul>
+                                <li><a asp-area="" asp-action="ShowActiveTickets_OfUser" asp-controller="Ticket">My tickets</a></li>
+                                <li><a asp-area="" asp-action="ShowAllTickets_User" asp-controller="Ticket">Available tickets</a></li>
+                                @if (User.IsInRole("admin"))
+                                {
+                                    <li>
+                                        <a href="#">Admin</a>
+                                        <ul>
+                                            <li><a asp-area="" asp-action="AddNewTicket" asp-controller="Ticket">Add new ticket</a></li>
+                                            <li><a asp-area="" asp-action="ShowAllTickets_Admin" asp-controller="Ticket">Show all tickets</a></li>
+                                        </ul>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="#" class="icon solid fa-angle-down">Hello, @User.Identity.Name</a>
+                            <ul>
+                                @if (User.IsInRole("user"))
+                                {
+                                    <li><a asp-area="" asp-action="Approve" asp-controller="Account">Approve</a></li>
+                                }
+                                <li><a asp-area="" asp-action="UpdateUser" asp-controller="Account">Edit username</a></li>
+                                <li><a asp-area="" asp-action="UpdatePassword" asp-controller="Account">Edit password</a></li>
+                                @if (User.IsInRole("admin"))
+                                {
+                                    <li>
+                                        <a href="#">Admin</a>
+                                        <ul>
+                                            <li><a asp-area="" asp-action="GetAll" asp-controller="Account">Show all users</a></li>
+                                        </ul>
+                                    </li>
+                                }
+                                <li><b><a asp-area="" asp-action="Logout" asp-controller="Account">Logout</a></b></li>
+                            </ul>
+                        </li>
+                    }
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-area="" asp-action="Login" asp-controller="Account" class="button">Sign In</a></li>
+                    }
+                </ul>
+            </nav>
+        </header>
+        @if (!User.Identity.IsAuthenticated)
+        {
+            @await Html.PartialAsync("BannerPartial");
+
+            <!-- Main -->
+            <section id="main" class="container">
+                <section class="box special">
+                    <header class="major">
+                        @RenderBody()
+                    </header>
+                    <span class="image featured">
+                        <img src="images/pic01.jpg" />
+                    </span>
+                </section>
+            </section>
+        }
+        @if (User.Identity.IsAuthenticated)
+        {
+            @await Html.PartialAsync("BannerAuthPartial");
+            <section id="main" class="container">
+                <div class="box">
+                    @RenderBody()
+                </div>
+            </section>
+        }
+        @await Html.PartialAsync("FooterPartial");
+    </div>
+    @await Html.PartialAsync("ScriptsPartial");
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

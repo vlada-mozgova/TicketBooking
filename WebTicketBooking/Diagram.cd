@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WebTicketBooking.Controllers.AccountController">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAIAAAABAAAAAAAAAIAAQABAAAAAgAQAAIAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Controllers.HomeController">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAEAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Controllers.TicketController">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAEBAACKAAAEBAAABEAgAAAAAAIEAAAAAA=</HashCode>
+      <FileName>Controllers\TicketController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Models.Account.ApproveModel">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Account\ApproveModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Models.Account.LoginModel">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Account\LoginModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Models.Account.RegisterModel">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAQAgAAAAAAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>Models\Account\RegisterModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Models.Account.UpdatePasswordModel">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAFAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Account\UpdatePasswordModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Models.Account.UpdateUserNameModel">
+    <Position X="3.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Models\Account\UpdateUserNameModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Models.Ticket.TicketModel">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAADAgAAQQAAAAAAAAEAAARAAAAAAAAECAAAAAgAAAA=</HashCode>
+      <FileName>Models\Ticket\TicketModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Models.Ticket.UpdateTicketModel">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAADAgAAQQAAAAAAAAEAAARAAAAAAAAECAAAAAgAAAA=</HashCode>
+      <FileName>Models\Ticket\UpdateTicketModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Models.ErrorViewModel">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.DAL.Models.Role">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="WebTicketBooking.DAL.Models.Ticket">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="WebTicketBooking.DAL.Models.User">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="WebTicketBooking.DAL.ApplicationContext">
+    <Position X="12.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="WebTicketBooking.Startup">
+    <Position X="6" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.Program">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebTicketBooking.DAL.Migrations.BookingDb">
+    <Position X="14.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,45 @@
+﻿@model WebTicketBooking.Models.Account.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1 align="center"><b>Login</b></h1>
+<div>
+    <form asp-action="Login">
+        <h1>Don't have an account?</h1>
+        <a asp-action="Register" asp-controller="Account">Sigh up</a>
+
+        <font color="red">
+            @TempData["failLog"]
+        </font>
+        <br />
+        <div asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="Username" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </font>
+            <input asp-for="Username" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <font color="red">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </font>
+            <input asp-for="Password" class="form-control" />
+        </div>
+        <hr />
+        <div class="form-group">
+            <input type="submit" value="Login" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Back Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
